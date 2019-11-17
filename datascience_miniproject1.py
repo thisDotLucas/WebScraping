@@ -93,7 +93,7 @@ class Restaurant():
 
     #uses the google maps distance matrix API to calculate the distance from our restaurant location to the Helsinki city square
     def location(self):
-        gmaps = googlemaps.Client(key = "AIzaSyBQUfiVnCWDTINRqvlYYgnZnRfmGPqdktc")
+        gmaps = googlemaps.Client(key = "Your Api Key")
         my_dist = gmaps.distance_matrix(self._location, distanceToBeMeasured)['rows'][0]['elements'][0]
         return my_dist["distance"]["text"]
     
